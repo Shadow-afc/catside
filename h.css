@@ -1,0 +1,243 @@
+body {
+    cursor: url('m.png'), auto;
+}
+.ded input {
+    width: 45%;
+  height: 42px;
+  padding-left: 10px;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+  outline: none;
+  background: #000000;
+  color: #9E9C9C;
+}
+.ded input:hover {
+      cursor: url('w.png'),auto;
+}
+.ded button {
+     position: absolute; 
+  top: 103px;
+  right: 385px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: #FFFFFF;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.ded button:before {
+     content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #F9F0DA;
+}
+.ded button:hover {
+      cursor: url('w.png'),auto;
+}
+
+.v2 {
+    position: absolute;
+    right: 600px;
+    bottom: 80px;
+    margin:10px auto;
+  width: auto;
+  border: 4px;
+  padding: 20px 25px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+.v3 {
+    position: absolute;
+    right: 93px;
+    bottom: 105px;
+    margin:10px auto;
+  width: auto;
+  border: 4px;
+  padding: 20px 25px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+.v6 {
+    position: absolute;
+    right: 600px;
+    top: 646px;
+    margin:10px auto;
+  width: auto;
+  border: 4px;
+  padding: 20px 25px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+.v7 {
+    position: absolute;
+    right: 1110px;
+    top: 656px;
+    margin:10px auto;
+  width: auto;
+  border: 4px;
+  padding: 20px 25px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+.v8 {
+    position: absolute;
+    right: 1110px;
+    top: 1150px;
+    margin:10px auto;
+  width: auto;
+  border: 4px;
+  padding: 20px 25px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+.v9 {
+    position: absolute;
+    right: 1110px;
+    bottom: 80px;
+    margin:10px auto;
+  width: auto;
+  border: 4px;
+  padding: 20px 25px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+.v12 {
+    position: absolute;
+    right: 93px;
+    top: 620px;
+    margin:10px auto;
+  width: auto;
+  border: 4px;
+  padding: 20px 25px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+.bt1 {
+    position: absolute;
+    display: inline-block;
+    background: #FFFFFF;
+    color: #000000;
+    padding: 0.5rem 1rem; 
+    text-decoration: none;
+    border-radius: 2px;
+    list-style: none;
+    right: 1220px;
+    bottom: 637px;
+    cursor: url('m.png'), pointer;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+     cursor: url('w.png'),auto;
+}
+.bt1:hover {
+    cursor: url('w.png'),auto;
+}
+.bt2 {
+    position: absolute;
+    display: inline-block;
+    background: #FFFFFF;
+    color: #000000;
+    padding: 0.5rem 1rem; 
+    text-decoration: none;
+    border-radius: 2px;
+    right: 1100px;
+    bottom: 637px;
+}
+p {
+    color: black;
+    font-size: 1.5rem;
+}
+.s1 {
+    position: absolute;
+    right: 1200px;
+    top: 170px;
+    margin:10px auto;
+  width: auto;
+  border: 4px;
+  padding: 20px 19px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+.s2 {
+     position: absolute;
+    right: 850px;
+    top: 170px;
+    margin:10px auto;
+  width: auto;
+  border: 4px;
+  padding: 20px 19px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+.s3 {
+    position: absolute;
+    right: 500px;
+    top: 170px;
+    margin:10px auto;
+  width: auto;
+  border: 4px;
+  padding: 20px 19px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+.s4 {
+     position: absolute;
+    right: 150px;
+    top: 170px;
+    margin:10px auto;
+  width: auto;
+  border: 4px;
+  padding: 20px 19px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+.s5 {
+     position: absolute;
+    right: 1200px;
+    top: 820px;
+    margin:10px auto;
+  width: auto;
+  border: 4px;
+  padding: 20px 19px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+.s6 {
+     position: absolute;
+    right: 850px;
+    top: 870px;
+    margin:10px auto;
+  width: auto;
+  border: 4px;
+  padding: 20px 19px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+.s7 {
+     position: absolute;
+    right: 500px;
+    top: 870px;
+    margin:10px auto;
+  width: auto;
+  border: 4px;
+  padding: 20px 19px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+.s8 {
+     position: absolute;
+    right: 150px;
+    top: 840px;
+    margin:10px auto;
+  width: auto;
+  border: 4px;
+  padding: 20px 19px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+.f1{
+    position: absolute;
+    right: 78px;
+}

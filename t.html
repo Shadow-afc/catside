@@ -1,0 +1,94 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <script type="text/javascript">
+var lastResFind=""; // последний удачный результат
+var copy_page=""; // копия страницы в ихсодном виде
+function TrimStr(s) {
+     s = s.replace( /^\s+/g, '');
+  return s.replace( /\s+$/g, '');
+}
+function FindOnPage(inputId) {//ищет текст на странице, в параметр передается ID поля для ввода
+  var obj = window.document.getElementById(inputId);
+  var textToFind;
+ 
+  if (obj) {
+    textToFind = TrimStr(obj.value);//обрезаем пробелы
+  } else {
+    alert("Введенная фраза не найдена");
+    return;
+  }
+  if (textToFind == "") {
+    alert("Вы ничего не ввели");
+    return;
+  }
+ 
+  if(document.body.innerHTML.indexOf(textToFind)=="-1")
+  alert("Ничего не найдено, проверьте правильность ввода!");
+ 
+  if(copy_page.length>0)
+        document.body.innerHTML=copy_page;
+  else copy_page=document.body.innerHTML;
+
+ 
+  document.body.innerHTML = document.body.innerHTML.replace(eval("/name="+lastResFind+"/gi")," ");//стираем предыдущие якори для скрола
+  document.body.innerHTML = document.body.innerHTML.replace(eval("/"+textToFind+"/gi"),"<p name="+textToFind+" style='background:orchid'>"+textToFind+"</p>"); //Заменяем найденный текст ссылками с якорем;
+  lastResFind=textToFind; // сохраняем фразу для поиска, чтобы в дальнейшем по ней стереть все ссылки
+  window.location = '#'+textToFind;//перемещаем скрол к последнему найденному совпадению
+ }
+</script>
+    <link rel="stylesheet" href="h.css">
+    <link rel="icon" href="g.ico">
+<title>Catside Short</title>
+</head>
+<body bgcolor="#000000" text="#FFFFFF">
+    <img src="q.png" width="150" height="95">
+    <div class="bt1">
+    <a href= "i.html">Обычное видео</a>
+    </div>
+    <div class="bt2">
+        <a href="t.html">Short видео</a>
+    </div>
+    <form method="get">
+    <div class="ded">
+        <center>
+        <form name="search" method="post" action="search.php">
+    <input id="text-to-find" class="input" placeholder="Напиши,что тебе нужно">
+    <button type="submit" onclick="javascript: FindOnPage('text-to-find'); return false;"></button>
+    </form>
+        </center>
+    </div>
+        <div class="s1">
+           <iframe width="238" height="502" src="https://www.youtube.com/embed/mutPp3Vi84Q" title="Что посмотреть в Корее? Кошачье кафе в Сеуле!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Кошачье кафе в Сеуле</p>
+        </div>
+         <div class="s2">
+            <iframe width="238" height="502" src="https://www.youtube.com/embed/wVjZCphFSBk" title="Классный способ сделать таблицу Excel удобной  #excel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+             <p>Классный способ <br>сделать таблицу <br>удобной</p>
+        </div>
+         <div class="s3">
+            <iframe width="238" height="502" src="https://www.youtube.com/embed/_GFy0QC_OcU" title="Я не знал, что HTML так может..." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+             <p>Интересная <br>способность <br> HTML</p>
+        </div>
+         <div class="s4">
+            <iframe width="238" height="502" src="https://www.youtube.com/embed/pu4QX89BdsQ" title="Ты не знал ЭТИ CSS свойства!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+             <p>Интересные свойства<br> CSS</p>
+        </div>
+         <div class="s5">
+            <iframe width="238" height="502" src="https://www.youtube.com/embed/WjIGKm4bGJs" title="ASMR Ear Cleaning | Ear Cleaning #1 - Chinese Traditional Spa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+             <p>Расслабляющая <br>чистка ушей</p>
+        </div>
+         <div class="s6">
+            <iframe width="238" height="502" src="https://www.youtube.com/embed/C7xttGRh8gA" title="（高清版）曼玉manyu沉浸式护理spa ASMR #柴犬 #豆柴 #抖音 #柴犬可愛い" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+             <p>Spa ASMR</p>
+        </div>
+         <div class="s7">
+            <iframe width="238" height="502" src="https://www.youtube.com/embed/JN_P5RZxsdY" title="Spa Day 🛁" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+             <p>Spa day for cat</p>
+        </div>
+         <div class="s8">
+           <iframe width="238" height="502" src="https://www.youtube.com/embed/PRYL7WxGUfM" title="Сырой осьминог #корея #korea #koreanfood #koreanstreetfood #koreanchicken #seafood #fishcakes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+             <p>Блюдо <br> "Сырой осминог"</p>
+        </div>
+</body>
+</html>
