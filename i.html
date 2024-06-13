@@ -1,0 +1,95 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <link rel="stylesheet" href="h.css">
+    <link rel="icon" href="g.ico">
+<title>Catside</title>
+<script type="text/javascript">
+var lastResFind=""; // последний удачный результат
+var copy_page=""; // копия страницы в ихсодном виде
+function TrimStr(s) {
+     s = s.replace( /^\s+/g, '');
+  return s.replace( /\s+$/g, '');
+}
+function FindOnPage(inputId) {//ищет текст на странице, в параметр передается ID поля для ввода
+  var obj = window.document.getElementById(inputId);
+  var textToFind;
+ 
+  if (obj) {
+    textToFind = TrimStr(obj.value);//обрезаем пробелы
+  } else {
+    alert("Введенная фраза не найдена");
+    return;
+  }
+  if (textToFind == "") {
+    alert("Вы ничего не ввели");
+    return;
+  }
+ 
+  if(document.body.innerHTML.indexOf(textToFind)=="-1")
+  alert("Ничего не найдено, проверьте правильность ввода!");
+ 
+  if(copy_page.length>0)
+        document.body.innerHTML=copy_page;
+  else copy_page=document.body.innerHTML;
+
+ 
+  document.body.innerHTML = document.body.innerHTML.replace(eval("/name="+lastResFind+"/gi")," ");//стираем предыдущие якори для скрола
+  document.body.innerHTML = document.body.innerHTML.replace(eval("/"+textToFind+"/gi"),"<p name="+textToFind+" style='background:orchid'>"+textToFind+"</p>"); //Заменяем найденный текст ссылками с якорем;
+  lastResFind=textToFind; // сохраняем фразу для поиска, чтобы в дальнейшем по ней стереть все ссылки
+  window.location = '#'+textToFind;//перемещаем скрол к последнему найденному совпадению
+ }
+</script>
+</head>
+<body bgcolor="#000000" text="#FFFFFFF">
+    <img src="c.png" width="150" height="95">
+    <div class="bt1">
+    <a href="i.html">Обычное видео</a>
+    </div>
+    <div class="bt2">
+        <a href="t.html">Short видео</a>
+    </div>
+    <div class="wrap">
+<form method="get">
+    <div class="ded">
+        <center>
+        <form>
+    <input type="text" id="text-to-find" class="input" placeholder="Напиши,что тебе нужно">
+    <button type="submit" onclick="javascript: FindOnPage('text-to-find'); return false;"></button>
+    </form>
+        </center>
+    </div>
+        </form>
+    </div>
+    <div class="elastic">
+    <div class="v2">
+    <iframe width="360" height="300" src="https://www.youtube.com/embed/lm-ddarw0p4?si=DBKtZzqXx5JooNm6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p>5 признаков того,что кот Вас <br>недолюбливает.</p>
+    </div>
+    <div class="v3">
+    <iframe width="360" height="300" src="https://www.youtube.com/embed/O04yZkUP7ZU?si=b7L_teEt3WsOwP9V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p>Признаки того,что кот Вас любит.</p>
+    </div>
+    <div class="v6">
+    <iframe width="360" height="300" src="https://www.youtube.com/embed/cJonJXtkWSg?si=7Ocy-rjBE9pWSgLy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p>10 глупых мифов о кошках,<br>в которые  люди верят.</p>
+    </div>
+    <div class="v7">
+    <iframe width="360" height="300" src="https://www.youtube.com/embed/AWOMdyzfE3Q?si=KVGGKDk_wDFHnn3v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p>Почему космонавтов не будут спасать,если он в открытом космосе.</p>
+    </div>
+    <div class="v8">
+    <iframe width="360" height="300" src="https://www.youtube.com/embed/PZOR7FCYCus?si=qPz00WC5DtT5Qs-i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p>Как наука повлияла на бытовую жизнь?</p>
+    </div>
+    <div class="v9">
+    <iframe width="360" height="300" src="https://www.youtube.com/embed/VR7Gyji8RVo?si=8S5V1lNKmjx4ODgi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p>Проблемы начинающих программистов.</p>
+    </div>
+    <div class="v12">
+    <iframe width="360" height="300" src="https://www.youtube.com/embed/JCGpsABhnJo?si=7EpO5u8E9tbBOoS9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p>Всё о радиации</p>
+    </div>
+    </div>
+</body>
+</html>
